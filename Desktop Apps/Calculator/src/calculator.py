@@ -137,8 +137,19 @@ if __name__ == "__main__":
     widget.show()
     sys.exit(app.exec())
 
-    # To compile the app, run the following command in the terminal:
+    # To compile into an executable, first create a new virtual environment:
+    # python -m venv myenv
+
+    # Then, activate the environment:
+    # myenv\Scripts\activate.bat (Windows)
+    # source myenv/bin/activate (MacOS/Linux)
+
+    # Then, install the required packages:
+    # pip install pyside6 pyinstaller
+
+    # Finally, run the following command in the terminal:
     # pyinstaller calculator.spec
-    # The spec file in this folder contains the configuration for this executable
+
+    # The spec file in this folder contains the build configuration
     # The final executable will be in the resulting dist folder
 
