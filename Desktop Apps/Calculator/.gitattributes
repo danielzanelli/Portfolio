@@ -1,2 +1,0 @@
-calculator.exe filter=lfs diff=lfs merge=lfs -text
-Calculator.exe filter=lfs diff=lfs merge=lfs -text
