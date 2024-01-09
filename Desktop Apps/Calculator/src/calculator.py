@@ -138,6 +138,7 @@ if __name__ == "__main__":
     sys.exit(app.exec())
 
     # To compile the app, run the following command in the terminal:
-    # pyinstaller --onefile --windowed --icon=icon.ico calculator.py
-    # The executable will be in the dist folder
-    
+    # pyinstaller calculator.spec
+    # The spec file in this folder contains the configuration for this executable
+    # The final executable will be in the resulting dist folder
+
