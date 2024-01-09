@@ -17,12 +17,12 @@ This is a simple calculator application built with Python and PySide6.
 
 ## Executable Compilation
 
-1. Ceate a new virtual environment in the src folder with 'python -m venv myenv'.
-2. Activate the environment with 'myenv\Scripts\activate.bat' for Windows or 'source myenv/bin/activate' for MacOS/Linux.
-3. Install the required packages with 'pip install pyside6 pyinstaller'
-4. Compile into an executable using 'pyinstaller calculator.spec'
+1. Ceate a new virtual environment in the src folder with `python -m venv myenv`.
+2. Activate the environment with `myenv\Scripts\activate.bat` for Windows or `source myenv/bin/activate` for MacOS/Linux.
+3. Install the required packages with `pip install pyside6 pyinstaller`
+4. Compile into an executable using `pyinstaller calculator.spec`
     
-The spec file in this project contains the build configuration. The final executable will be in the resulting 'dist' folder.
+The spec file in this project contains the build configuration. The final executable will be in the resulting `dist` folder.
 
 
 ## Usage
