@@ -2,6 +2,9 @@
 
 This is a simple calculator application built with Python and PySide6.
 
+![Calculator screenshot](https://github.com/danielzanelli/Portfolio/assets/83187517/153d3417-d1af-4176-ad26-d193a8df62b8)
+
+
 ## Features
 
 - Basic arithmetic operations: addition, subtraction, multiplication, and division.
