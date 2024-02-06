@@ -21,7 +21,7 @@ This is a simple multi layered perceptron structure for a neural network using o
 
 The training and testing dataset was obtained from the `make_blobs` method from the `scikit-learn` library, which generates an arbitrary amount of datapoints belonging to clusters. 
 The caracteristics of this cluster data can be modified by changing the hyperparameters at the top of the `benchmark.py` file.
-As an example, in the following figure we can see a dataset of `1000` datapoints with `2` features conforming `3` clusters.
+As an example, in the following figure we can see a dataset of `1000` datapoints, with `2` features, conforming `3` clusters.
 
 ![Dataset](https://github.com/danielzanelli/Portfolio/assets/83187517/15af20f9-42a3-431b-8b7a-22f6d3515fd0)
 
