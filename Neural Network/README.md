@@ -43,15 +43,15 @@ After running `python benchmark.py`, here is the typical output:
 
   	[INFO] Initializing benchmark with hyperparameters:
 
-	  - clusters: 		  4
-	  - features: 		  3
-	  - datapoints: 		1000
+	  - clusters: 		4
+	  - features: 		3
+	  - datapoints: 	1000
 	  - hidden layers: 	[5, 15, 10]
-	  - epochs: 		    1000
+	  - epochs: 		1000
 	  - learning rate: 	0.1
-	  - plot: 		      True
-	  - display update: 100
-	  - save figure: 		True
+	  - plot: 		True
+	  - display update: 	100
+	  - save figure: 	True
 
 	  [INFO] Training network...
 	  [INFO] epoch=1, loss=186.2118808
@@ -71,4 +71,4 @@ After running `python benchmark.py`, here is the typical output:
 Results vary depending on the hyperparameters used. Nevertheless, the highest accuracy can be achieved by having a number of features greater than the number of clusters.
 The training results from the previous run can be seen in the following image:
 
-![Training results](https://github.com/danielzanelli/Portfolio/Neural%20Network/benchmark_loss.png)
+![Training results](https://github.com/danielzanelli/Portfolio/blob/main/Neural%20Network/benchmark_loss.png)
