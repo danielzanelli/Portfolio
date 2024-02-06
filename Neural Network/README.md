@@ -53,20 +53,20 @@ After running `python benchmark.py`, here is the typical output:
 	  - display update: 	100
 	  - save figure: 	True
 
-	  [INFO] Training network...
-	  [INFO] epoch=1, loss=186.2118808
-	  [INFO] epoch=100, loss=57.3403134
-	  [INFO] epoch=200, loss=22.7830419
-	  [INFO] epoch=300, loss=31.0263420
-	  [INFO] epoch=400, loss=30.4058605
-	  [INFO] epoch=500, loss=56.9841132
-	  [INFO] epoch=600, loss=34.8120568
-	  [INFO] epoch=700, loss=44.6387492
-	  [INFO] epoch=800, loss=67.8145591
-	  [INFO] epoch=900, loss=56.9760014
-	  [INFO] epoch=1000, loss=37.6635601
-	  [INFO] Testing network...
-	  [INFO] Final test accuracy: 91.40%
+	[INFO] Training network...
+	[INFO] epoch=1, loss=186.2118808
+	[INFO] epoch=100, loss=57.3403134
+	[INFO] epoch=200, loss=22.7830419
+	[INFO] epoch=300, loss=31.0263420
+	[INFO] epoch=400, loss=30.4058605
+	[INFO] epoch=500, loss=56.9841132
+	[INFO] epoch=600, loss=34.8120568
+	[INFO] epoch=700, loss=44.6387492
+	[INFO] epoch=800, loss=67.8145591
+	[INFO] epoch=900, loss=56.9760014
+	[INFO] epoch=1000, loss=37.6635601
+	[INFO] Testing network...
+	[INFO] Final test accuracy: 91.40%
 
 Results vary depending on the hyperparameters used. Nevertheless, the highest accuracy can be achieved by having a number of features greater than the number of clusters.
 The training results from the previous run can be seen in the following image:
