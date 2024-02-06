@@ -72,3 +72,9 @@ Results vary depending on the hyperparameters used. Nevertheless, the highest ac
 The training results from the previous run can be seen in the following image:
 
 ![Training results](https://github.com/danielzanelli/Portfolio/blob/main/Neural%20Network/benchmark_loss.png)
+
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
