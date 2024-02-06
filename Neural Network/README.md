@@ -27,15 +27,15 @@ As an example, in the following figure we can see a dataset of `1000` datapoints
 
 ## Hyperparameters
 
-- Clusters: Number of clusters in the dataset
-- Features: Number of features in the dataset
-- Datapoints: Number of datapoints in the dataset
-- Hidden Layers: List of number of sizes of each of the hidden layers (eg. [4, 16, 32, 16, 4])
-- Epochs: Number of training epochs
-- Learning rate: Learning rate of training
-- Plot: Boolean to plot training results
-- Display Update: Number of epochs elapsed before progress is displayed
-- Save Figure: Boolean to save training results into image
+- Clusters: 		Number of clusters in the dataset
+- Features: 		Number of features in the dataset
+- Datapoints: 		Number of datapoints in the dataset
+- Hidden Layers: 	List of number of sizes of each of the hidden layers (eg. [4, 16, 32, 16, 4])
+- Epochs: 		Number of training epochs
+- Learning rate: 	Learning rate of training
+- Plot: 		Boolean to plot training results
+- Display Update: 	Number of epochs elapsed before progress is displayed
+- Save Figure: 		Boolean to save training results into image
 
 ## Results
 
