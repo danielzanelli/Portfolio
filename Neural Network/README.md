@@ -27,15 +27,15 @@ As an example, in the following figure we can see a dataset of `1000` datapoints
 
 ## Hyperparameters
 
-- Clusters: 		Number of clusters in the dataset
-- Features: 		Number of features in the dataset
-- Datapoints: 		Number of datapoints in the dataset
-- Hidden Layers: 	List of number of sizes of each of the hidden layers (eg. [4, 16, 32, 16, 4])
-- Epochs: 		Number of training epochs
-- Learning rate: 	Learning rate of training
-- Plot: 		Boolean to plot training results
-- Display Update: 	Number of epochs elapsed before progress is displayed
-- Save Figure: 		Boolean to save training results into image
+- Clusters: 		&nbsp;Number of clusters in the dataset
+- Features: 		&nbsp;Number of features in the dataset
+- Datapoints: 		&nbsp;Number of datapoints in the dataset
+- Hidden Layers: 	&nbsp;List of number of sizes of each of the hidden layers (eg. [4, 16, 32, 16, 4])
+- Epochs: 		&nbsp;Number of training epochs
+- Learning rate: 	&nbsp;Learning rate of training
+- Display Update: 	&nbsp;Number of epochs elapsed before progress is displayed
+- Plot: 		&nbsp;Boolean to plot training results
+- Save Figure: 		&nbsp;Boolean to save training results into image
 
 ## Results
 
@@ -49,8 +49,8 @@ After running `python benchmark.py`, here is the typical output:
 	  - hidden layers: 	[5, 15, 10]
 	  - epochs: 		1000
 	  - learning rate: 	0.1
-	  - plot: 		True
 	  - display update: 	100
+	  - plot: 		True
 	  - save figure: 	True
 
 	[INFO] Training network...
