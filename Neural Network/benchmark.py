@@ -22,8 +22,8 @@ epochs = 1000
 learning_rate = 0.1
 
 # Other
-plot = True
 display_update = 100
+plot = True
 savefigure = True
 
 ############################################################
@@ -42,15 +42,16 @@ y = ohe.fit_transform(y).toarray()
 
 # Initialize the network
 nn = NeuralNetwork([features] + hidden_layers + [clusters])
-print("[INFO] Initializing benchmark with hyperparameters:\n\n\t"
+
+print("[INFO] Initializing benchmark test with hyperparameters:\n\n\t"
         f"- clusters: \t\t{clusters}\n\t"
         f"- features: \t\t{features}\n\t"
         f"- datapoints: \t\t{datapoints}\n\t"
         f"- hidden layers: \t{hidden_layers}\n\t"
         f"- epochs: \t\t{epochs}\n\t"
         f"- learning rate: \t{learning_rate}\n\t"
-        f"- plot: \t\t{plot}\n\t"
         f"- display update: \t{display_update}\n\t"
+        f"- plot: \t\t{plot}\n\t"
         f"- save figure: \t\t{savefigure}\n")
 
 # Train the network
@@ -74,7 +75,9 @@ plt.title("Training Loss")
 plt.xlabel("Epoch #")
 plt.ylabel("Loss")
 plt.grid()
+
 if savefigure:
     plt.savefig("benchmark_loss.png")
+
 if plot:
     plt.show()
