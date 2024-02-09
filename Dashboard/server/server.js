@@ -13,7 +13,8 @@ app.use(function (req, res, next) {
   next();
 });
 
-const HOST = "localhost";
+//const HOST = "localhost";
+const HOST = "0.0.0.0";
 const PORT = 5000;
 const SESS_SECRET = "secret";
 const IS_PROD = false;
@@ -52,7 +53,8 @@ app.use(
   })
 );
 
-app.listen(PORT, () => console.log(`Server started on http://${HOST}:${PORT}`));
+app.listen(PORT, HOST, () =>
+  console.log(`Server started on http://${HOST}:${PORT}`)
+);
 
 app.use("/api/users", require("./routes/users"));
-app.use("/api/data", require("./routes/data"));

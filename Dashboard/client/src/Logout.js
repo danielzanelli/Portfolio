@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import localForage from "localforage";
 
-class Logout extends Component {
-  render() {
+function Logout() {
+  useEffect(() => {
     axios
       .delete(localStorage.getItem("API") + "users/logout", {
         headers: {
@@ -14,8 +14,6 @@ class Logout extends Component {
         withCredentials: true,
       })
       .then((res) => {
-        //console.log(`statusCode: ${res.status}`);
-        //console.log(res);
         localStorage.clear();
         localForage.clear();
         window.location.href = "/login";
@@ -26,9 +24,9 @@ class Logout extends Component {
         localForage.clear();
         window.location.href = "/login";
       });
+  }, []);
 
-    return <h1>Bye</h1>;
-  }
+  return <h1>Bye</h1>;
 }
 
 export default Logout;

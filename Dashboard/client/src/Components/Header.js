@@ -1,92 +1,52 @@
 import React from "react";
 import logo from "../logo.png";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "../index.css";
 
+function NavLink({ currentLocation, path, label }) {
+  const isActive = currentLocation === path;
+  const color = isActive ? "text-black" : "text-gray-500";
+  const border = isActive ? "border-b-2 border-black" : "";
+
+  return (
+    <a
+      className={`font-sans ${color} lg:text-2xl md:text-xl sm:text-base ${border} hover:text-black font-semibold text-center`}
+      href={path}
+    >
+      {label}
+    </a>
+  );
+}
+
 function Header() {
-  var isLoggedIn = function () {
-    return JSON.parse(localStorage.getItem("Auth"));
-  };
+  const isLoggedIn = JSON.parse(localStorage.getItem("Auth"));
+  const location = useLocation().pathname;
 
-  var location = useLocation().pathname;
+  const links = isLoggedIn
+    ? [
+        { path: "/", label: "Home" },
+        { path: "/logout", label: "Log Out" },
+      ]
+    : [
+        { path: "/", label: "Home" },
+        { path: "/login", label: "Log In" },
+      ];
 
-  if (isLoggedIn()) {
-    return (
-      <div class="flex  bg-white shadow space-y-2 ">
-        <img class="h-12 w-12 mr-10" src={logo} alt="icon" />
-        <nav class="flex justify-between w-screen px-20">
-          {location === "/" ? (
-            <a
-              class=" font-sans text-black lg:text-2xl md:text-xl sm:text-baseborder-b-2 border-b-2 border-black hover:text-black font-semibold  text-center "
-              href="/"
-            >
-              Home
-            </a>
-          ) : (
-            <a
-              class=" font-sans  text-gray-500 lg:text-2xl md:text-xl sm:text-base hover:text-black font-semibold  text-center "
-              href="/data"
-            >
-              Home
-            </a>
-          )}
-          {location === "/logout" ? (
-            <a
-              class=" font-sans text-black lg:text-2xl md:text-xl sm:text-baseborder-b-2 border-b-2 border-black hover:text-black font-semibold  text-center "
-              href="/logout"
-            >
-              Log Out
-            </a>
-          ) : (
-            <a
-              class=" font-sans  text-gray-500 lg:text-2xl md:text-xl sm:text-base hover:text-black font-semibold  text-center "
-              href="/logout"
-            >
-              Log Out
-            </a>
-          )}
-        </nav>
-      </div>
-    );
-  } else {
-    return (
-      <div class="flex  bg-white shadow space-y-2 ">
-        <img class="h-12 w-12 mr-10" src={logo} alt="icon" />
-        <nav class="flex justify-between w-screen px-20">
-          {location === "/" ? (
-            <a
-              class=" font-sans text-black lg:text-2xl md:text-xl sm:text-baseborder-b-2 border-b-2 border-black hover:text-black font-semibold  text-center "
-              href="/"
-            >
-              Home
-            </a>
-          ) : (
-            <a
-              class="font-sans  text-gray-500 lg:text-2xl md:text-xl sm:text-base hover:text-black font-semibold  text-center"
-              href="/"
-            >
-              Home
-            </a>
-          )}
-          {location === "/login" ? (
-            <a
-              class=" font-sans text-black lg:text-2xl md:text-xl sm:text-baseborder-b-2 border-b-2 border-black hover:text-black font-semibold  text-center "
-              href="/login"
-            >
-              Log In
-            </a>
-          ) : (
-            <a
-              class="font-sans  text-gray-500 lg:text-2xl md:text-xl sm:text-base hover:text-black font-semibold  text-center"
-              href="/login"
-            >
-              Log In
-            </a>
-          )}
-        </nav>
-      </div>
-    );
-  }
+  return (
+    <div className="flex bg-white shadow space-y-2">
+      <img className="h-12 w-12 mr-10" src={logo} alt="icon" />
+      <nav className="flex justify-between w-screen px-20">
+        {links.map((link) => (
+          <NavLink
+            key={link.path}
+            currentLocation={location}
+            path={link.path}
+            label={link.label}
+          />
+        ))}
+      </nav>
+    </div>
+  );
 }
 
 export default Header;
