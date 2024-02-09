@@ -27,7 +27,6 @@ function Dashboard() {
       .catch((e) => {
         localStorage.setItem("Auth", false);
         setReload(true);
-        //this.props.history.push("/logout")
       });
   };
 
