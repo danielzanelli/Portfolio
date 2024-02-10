@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import Header from "./Components/Header.js";
+import Header from "./Header.js";
 
-const api = "https://demo.automatype.com/api/";
-// const api = "http://localhost:5000/api/";
+//const api = "https://demo.automatype.com/api/";
+const api = "http://localhost:5000/api/";
 
 function Login() {
-  const [formState, setFormState] = useState({ email: "", password: "" });
+  const [formState, setFormState] = useState({ name: "", password: "" });
 
   const handleChange = (e) => {
     setFormState({
@@ -128,8 +128,8 @@ function Login() {
             <div>
               <input
                 className="p-1 my-3 rounded-lg bg-gray-100 shadow-md focus:outline-none focus:border-2 border-cyan-500"
-                placeholder="Email"
-                name="email"
+                placeholder="Username"
+                name="name"
                 type="text"
                 onChange={handleChange}
               />

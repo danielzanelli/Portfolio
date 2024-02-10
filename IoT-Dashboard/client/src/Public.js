@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "./Components/Header.js";
+import Header from "./Header.js";
 import Lottie from "react-lottie";
 
 function Public() {

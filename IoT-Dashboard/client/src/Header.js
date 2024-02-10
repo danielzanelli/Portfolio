@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../logo.png";
+import logo from "./logo.png";
 import { useLocation } from "react-router-dom";
-import "../index.css";
+import "./index.css";
 
 function NavLink({ currentLocation, path, label }) {
   const isActive = currentLocation === path;
@@ -34,7 +34,9 @@ function Header() {
 
   return (
     <div className="flex bg-white shadow space-y-2">
-      <img className="h-12 w-12 mr-10" src={logo} alt="icon" />
+      <a href="https://automatype.com">
+        <img className="h-12 w-12 mr-10" src={logo} alt="icon" />
+      </a>
       <nav className="flex justify-between w-screen px-20">
         {links.map((link) => (
           <NavLink
