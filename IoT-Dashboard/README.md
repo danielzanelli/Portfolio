@@ -24,7 +24,7 @@ You can try out a live demo of the dasboard by going to <https://demo.automatype
 - Reactive styling to fit various screen sizes, including mobile.
 - Deployment of live demo on a server using `nginx` and `certbot`.
 
-## Local Use
+## Local Build
 
 1. Download and install the `MongoDB Community Edition` database by follwing the steps in <https://www.mongodb.com/try/download/community> for your local operating system.
 2. Clone the repository: `git clone https://github.com/danielzanelli/Portfolio.git`
