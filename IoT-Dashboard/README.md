@@ -6,6 +6,10 @@ This project is an IoT Dashboard designed to monitor a user's IoT devices by pro
 
 Although the data is fake and created on the client-side, a server-side login authentication algorithm has been implemented using a MongoDB database.
 
+
+![dashboard](https://github.com/danielzanelli/Portfolio/assets/83187517/3c581b63-bbfb-4647-8d70-a4ac742b96f4)
+
+
 ## Live Demo
 
 You can try out a live demo of the dasboard by going to <https://demo.automatype.com> and logging in using the following credentials:
