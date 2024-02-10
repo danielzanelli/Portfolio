@@ -4,29 +4,13 @@ const bcrypt = require("bcryptjs");
 
 const User = require("../models/User");
 
-/*
-router.post("/register", (req, res) => {
-  const { name, email, password } = req.body;
-
-  // Check required fields
-  if (!name || !email || !password) {
-    return res.status(400).json({ msg: "Please enter all fields" });
-  }
-  //Check password length
-  if (password.length < 6) {
-    return res
-      .status(400)
-      .json({ msg: "Password should be atleast 6 characters long" });
-  }
-
-  User.findOne({ email: email }).then((user) => {
-    if (user) return res.status(400).json({ msg: "User already exists" });
-  });
+router.get("/new-user", (req, res) => {
+  var name = "user-" + Math.floor(Math.random() * 1000);
+  var password = "password-" + Math.floor(Math.random() * 1000);
 
   //New User created
   const newUser = new User({
     name: name,
-    email: email,
     password: password,
   });
 
@@ -41,23 +25,26 @@ router.post("/register", (req, res) => {
         .save()
         .then(
           res.json({
-            msg: "Successfully Registered",
+            msg:
+              "Successfully Registered user with name: " +
+              name +
+              " and password: " +
+              password,
           })
         )
         .catch((err) => console.log(err));
     })
   );
 });
-*/
 
 router.post("/login", (req, res) => {
-  const { email, password } = req.body;
+  const { name, password } = req.body;
   // basic validation
-  if (!email || !password) {
+  if (!name || !password) {
     return res.status(400).json({ msg: "Please enter all fields" });
   }
   //check for existing user
-  User.findOne({ email }).then((user) => {
+  User.findOne({ name }).then((user) => {
     if (!user) return res.status(400).json({ msg: "User does not exist" });
 
     // Validate password
@@ -67,7 +54,6 @@ router.post("/login", (req, res) => {
       const sessUser = {
         id: user.id,
         name: user.name,
-        email: user.email,
         origin: req.headers.origin,
       };
       req.session.user = sessUser; // Auto saves session data in mongo store

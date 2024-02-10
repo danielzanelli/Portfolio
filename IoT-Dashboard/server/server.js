@@ -13,15 +13,15 @@ app.use(function (req, res, next) {
   next();
 });
 
-//const HOST = "localhost";
-const HOST = "0.0.0.0";
+const HOST = "localhost";
+//const HOST = "0.0.0.0";
 const PORT = 5000;
 const SESS_SECRET = "secret";
 const IS_PROD = false;
 const COOKIE_NAME = "session-id";
 
 const MongoURI = "mongodb://localhost:27017/dashboard";
-const MAX_AGE = 1000 * 60 * 60 * 2; // 2hr
+const MAX_AGE = 1000 * 60 * 60 * 1; // 1hr
 
 mongoose
   .connect(MongoURI, {
